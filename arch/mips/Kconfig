@@ -54,6 +54,8 @@ config TARGET_PB1X00
 config ARCH_LANTIQ
 	bool "Lantiq based platforms"
 	select DM
+	select DM_SERIAL
+	select LANTIQ_SERIAL
 
 endchoice
 

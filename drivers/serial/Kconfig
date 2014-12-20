@@ -138,6 +138,12 @@ config SANDBOX_SERIAL
 	     -t raw		Raw mode, Ctrl-C is processed by U-Boot
 	     -t cooked		Cooked mode, Ctrl-C terminates
 
+config LANTIQ_SERIAL
+	bool "Lantiq SoC UART support"
+	depends on ARCH_LANTIQ && DM_SERIAL
+	help
+	  Support for the UART found on Lantiq SoC's.
+
 config UNIPHIER_SERIAL
 	bool "Support for UniPhier on-chip UART"
 	depends on ARCH_UNIPHIER
