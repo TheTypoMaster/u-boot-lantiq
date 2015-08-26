@@ -189,6 +189,11 @@ config SYS_MIPS_CACHE_INIT_RAM_LOAD
 config CPU_DISABLE_CACHES
 	bool
 
+config CACHE_INIT_INDEX_BASE
+	hex
+	default 0x80000000 if 32BIT
+	default 0xffffffff80000000 if 64BIT
+
 endif
 
 endmenu
